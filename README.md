@@ -1,10 +1,10 @@
-# EVON Bootstrap
+# EVON Bootstrap Docker
 
 Use this Docker image to connect a server to your Evon Hub overlay network.
 
 ## What is Evon?
 
-Evon (Elastic Virtual Overlay Network) is an OpenVPN-based connectivity system for building an overlay network for disparate servers. The Evon Hub server is distributed as an AWS AMI, reachable at `<account_id>.evon.link`. Connected servers can communicate with each other and are accessible by connected uses, based on policy. Each connected server is reachable via DNS (resolving to private addresses at `<hostname>.<account_id>.evon.link`) and IPv4 routing.
+Evon (Elastic Virtual Overlay Network) is an OpenVPN-based connectivity system for building an overlay network for disparate servers. The Evon Hub server is distributed as an AWS AMI, reachable at `<account_id>.evon.link`. Connected servers can communicate with each other and are accessible by connected uses, based on policy. Each connected server is reachable via DNS, resolving to private addresses at `<hostname>.<account_id>.evon.link`, using IPv4 routing.
 
 The Evon overlay network allows for frictionless access to managed servers that are otherwise only reachable via bespoke access systems (VPN’s/RDP/Citrix/etc). It also avails unified orchestration, monitoring, centralised logging and other management services of all connected systems via the overlay network, and it provides an AWS bridge for off-cloud systems to utilise AWS resources.
 
