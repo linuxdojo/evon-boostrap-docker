@@ -8,6 +8,6 @@ CMD [ -z $EVON_DEPLOY_KEY ] && echo "ERROR: You must define environment variable
     mkdir -p /lib/modules/$(uname -r) && \
     mkdir -p /dev/net && \
     mknod /dev/net/tun c 10 200 || : && \
-    ./bootstrap.sh --install --no-start && \
+    ./bootstrap.sh --install --no-start --hostname "${EVON_HOSTNAME}" && \
     cd /etc/openvpn && \
     openvpn evon.conf
