@@ -12,3 +12,7 @@ docker-image: # Create Evon-Bootstrap Docker image
 docker-publish: # publish docker image
 	docker login
 	docker push linuxdojo/evon-bootstrap
+
+all: # Build and publish docker image
+	make docker-image
+	make docker-publish
