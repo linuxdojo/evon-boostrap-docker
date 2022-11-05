@@ -29,6 +29,7 @@ You may also provide the following optional env vars:
 
 * `EVON_HOSTNAME` - will cause this system to be registered as `<EVON_HOSTNAME>.mybiz.evon.link`. If omitted, HOSTNAME will become the output of the `uname -n` command inside the Docker container.
 * `EVON_UUID` - a UUID version 4 string (as outputted by the `uuidgen` command on Linux), and maps to a static IPv4 address on the overlay network. For never seen before UUID's, a new IPv4 address will be permanently assigned to the new UUID. If this env var is omitted, a new UUID will be auto-generated each time the Docker container is run.
+* `EXTRA_ARGS` - any extra arguments you may wish to provide to the `boostrap.sh` installer that is executed inside the container, eg `--extra-config <FILE>`. Note that `<FILE>` in this example must be local within the container, therefore either the `--volume` or `--mount` Docker run options should be used to inject `<FILE>` into the container at runtime. Refer to the [Docker docs](https://docs.docker.com/engine/reference/commandline/run/#add-bind-mounts-or-volumes-using-the---mount-flag) for more info. Download and run `bootstrap.sh` from your Evon Hub with the `--help` option for info about the `--extra-config` and other options available.
 
 ```
 docker run \
